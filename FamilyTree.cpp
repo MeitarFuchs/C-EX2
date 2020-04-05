@@ -3,44 +3,35 @@
     #include <iostream>
 
     using namespace std;
+
     namespace family
     {
+        NodeTree::NodeTree (string name)
+        {
+            this->myName = name;
+        }
 
-        class NodeTree
-                {
-                    public:
-                    NodeTree *mother; // rigth
-                    NodeTree *father; // left
-                    string myName;
-                    NodeTree (string name);
+        Tree::Tree (string name)
+        {
+            NodeTree node(name);
+            this->root = &node;
+        }
+        Tree Tree::addFather(string child , string father)
+        {   Tree t("Josh") ;
+            return t; }
+        Tree Tree:: addMother(string child , string father)
+        {   Tree t("meitar");
+        return t;}
+        string relation(string name)
+        {return "k";}
+        string find(string name)
+        {return "k";}
 
-                }
-
-
-        class Tree
-                {
-                    NodeTree *root; //private
-
-                    public:
-                    Tree() {;}
-                    Tree (string name){ ;  }
-
-                    Tree addFather(string child , string father)
-                    {return this;}
-                    Tree addMother(string child , string mother)
-                    {return this;}
-
-                    string relation(string name)
-                    {return "";}
-                    string find(string name);
-                    {return "";}
-                    void display();
-                    Node remove(string s);
-                    {return this;}
-
-                    string toString();
-
-                }
-
-
-    }
+        void remove(string name)
+        {;}
+        void display()
+        {;}
+        string toString() // for the diplay function
+        {return "k";}
+    
+    };
